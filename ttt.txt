@@ -1,0 +1,58 @@
+	seance seance1 = seance_par_jour(sem1, 1, 1);
+        seance seance2 = seance_par_jour(sem1, 1, 2);
+        seance seance3 = seance_par_jour(sem1, 1, 3);
+        seance seance4 = seance_par_jour(sem1, 1, 4);
+        seance seance5 = seance_par_jour(sem1, 1, 5);
+        seance seance6 = seance_par_jour(sem1, 1, 6); 
+        seance seance7 = seance_par_jour(sem1, 1, 7);
+        
+        seance seance11 = seance_par_jour(sem1, 2, 1);
+        seance seance21 = seance_par_jour(sem1, 2, 2);
+        seance seance31 = seance_par_jour(sem1, 2, 3);
+        seance seance41 = seance_par_jour(sem1, 2, 4);
+        seance seance51 = seance_par_jour(sem1, 2, 5);
+        seance seance61 = seance_par_jour(sem1, 2, 6); 
+        seance seance71 = seance_par_jour(sem1, 2, 7);
+        
+        seance seance12 = seance_par_jour(sem1, 3, 1);
+        seance seance22 = seance_par_jour(sem1, 3, 2);
+        seance seance32 = seance_par_jour(sem1, 3, 3);
+        seance seance42 = seance_par_jour(sem1, 3, 4);
+        seance seance52 = seance_par_jour(sem1, 3, 5);
+        seance seance62 = seance_par_jour(sem1, 3, 6); 
+        seance seance72 = seance_par_jour(sem1, 3, 7);
+        
+        seance seance13 = seance_par_jour(sem1, 4, 1);
+        seance seance23 = seance_par_jour(sem1, 4, 2);
+        seance seance33 = seance_par_jour(sem1, 4, 3);
+        seance seance43 = seance_par_jour(sem1, 4, 4);
+        seance seance53 = seance_par_jour(sem1, 4, 5);
+        seance seance63 = seance_par_jour(sem1, 4, 6); 
+        seance seance73 = seance_par_jour(sem1, 4, 7);
+        
+        seance seance14 = seance_par_jour(sem1, 5, 1);
+        seance seance24 = seance_par_jour(sem1, 5, 2);
+        seance seance34 = seance_par_jour(sem1, 5, 3);
+        seance seance44 = seance_par_jour(sem1, 5, 4);
+        seance seance54 = seance_par_jour(sem1, 5, 5);
+        seance seance64 = seance_par_jour(sem1, 5, 6); 
+        seance seance74 = seance_par_jour(sem1, 5, 7);
+        
+        seance seance15 = seance_par_jour(sem1, 6, 1);
+        seance seance25 = seance_par_jour(sem1, 6, 2);
+        seance seance35 = seance_par_jour(sem1, 6, 3);
+        seance seance45 = seance_par_jour(sem1, 6, 4);
+        seance seance55 = seance_par_jour(sem1, 6, 5);
+        seance seance65 = seance_par_jour(sem1, 6, 6); 
+        seance seance75 = seance_par_jour(sem1, 6, 7);
+
+
+Object[][] matieres = {   //seance2.gettype()+" - "+seance2.getcours()+" - salle "+ seance2.getsalle()
+          {"8h30/10h00", affConv(seance1.gettype(),seance1.getcours(),seance1.getsalle(), seance1.getprofesseur()),affConv(seance11.gettype(),seance11.getcours(),seance11.getsalle(), seance11.getprofesseur()),affConv(seance12.gettype(),seance12.getcours(),seance12.getsalle(), seance12.getprofesseur()),affConv(seance13.gettype(),seance13.getcours(), seance13.getsalle(), seance13.getprofesseur()),affConv(seance14.gettype(),seance14.getcours(),seance14.getsalle(), seance14.getprofesseur()),affConv(seance15.gettype(),seance15.getcours(), seance15.getsalle(), seance15.getprofesseur())},
+          {"10h15/11h45", affConv(seance2.gettype(),seance2.getcours(),seance2.getsalle(), seance2.getprofesseur()),affConv(seance21.gettype(),seance21.getcours(), seance21.getsalle(), seance21.getprofesseur()),affConv(seance22.gettype(),seance22.getcours(),seance22.getsalle(), seance22.getprofesseur()),affConv(seance23.gettype(),seance23.getcours(), seance23.getsalle(), seance23.getprofesseur()),affConv(seance24.gettype(),seance24.getcours(),seance24.getsalle(), seance24.getprofesseur()),affConv(seance25.gettype(),seance25.getcours(), seance25.getsalle(), seance25.getprofesseur())},
+          {"12h00/13h30", affConv(seance3.gettype(),seance3.getcours(),seance3.getsalle(), seance3.getprofesseur()),affConv(seance31.gettype(),seance31.getcours(), seance31.getsalle(), seance31.getprofesseur()),affConv(seance32.gettype(),seance32.getcours(),seance32.getsalle(), seance32.getprofesseur()),affConv(seance33.gettype(),seance33.getcours(), seance33.getsalle(), seance33.getprofesseur()),affConv(seance34.gettype(),seance34.getcours(),seance34.getsalle(), seance34.getprofesseur()),affConv(seance35.gettype(),seance35.getcours(),seance35.getsalle(), seance35.getprofesseur())},
+          {"13h45/15h15", affConv(seance4.gettype(),seance4.getcours(),seance4.getsalle(), seance4.getprofesseur()),affConv(seance41.gettype(),seance41.getcours(), seance41.getsalle(), seance41.getprofesseur()),affConv(seance42.gettype(),seance42.getcours(), seance42.getsalle(), seance42.getprofesseur()),affConv(seance43.gettype(),seance43.getcours(), seance43.getsalle(), seance43.getprofesseur()),affConv(seance44.gettype(),seance44.getcours(),seance44.getsalle(), seance44.getprofesseur()),affConv(seance45.gettype(),seance45.getcours(),seance45.getsalle(), seance45.getprofesseur())},
+          {"15h30/17h00", affConv(seance5.gettype(),seance5.getcours(),seance5.getsalle(), seance5.getprofesseur()),affConv(seance51.gettype(),seance51.getcours(), seance51.getsalle(), seance51.getprofesseur()),affConv(seance52.gettype(),seance52.getcours(),seance52.getsalle(), seance52.getprofesseur()),affConv(seance53.gettype(),seance53.getcours(), seance53.getsalle(), seance53.getprofesseur()),affConv(seance54.gettype(),seance54.getcours(),seance54.getsalle(), seance54.getprofesseur()),affConv(seance55.gettype(),seance55.getcours(),seance55.getsalle(), seance55.getprofesseur())},
+          {"17h15/18h45", affConv(seance6.gettype(),seance6.getcours(),seance6.getsalle(), seance6.getprofesseur()),affConv(seance61.gettype(),seance61.getcours(), seance61.getsalle(), seance61.getprofesseur()),affConv(seance62.gettype(),seance62.getcours(),seance62.getsalle(), seance62.getprofesseur()),affConv(seance63.gettype(),seance63.getcours(),seance63.getsalle(), seance63.getprofesseur()),affConv(seance64.gettype(),seance64.getcours(),seance64.getsalle(), seance64.getprofesseur()),affConv(seance65.gettype(),seance65.getcours(),seance65.getsalle(), seance65.getprofesseur())},
+          {"19h00/20h30", affConv(seance7.gettype(),seance7.getcours(),seance7.getsalle(), seance7.getprofesseur()),affConv(seance71.gettype(),seance71.getcours(), seance71.getsalle(), seance71.getprofesseur()),affConv(seance72.gettype(),seance72.getcours(),seance72.getsalle(), seance72.getprofesseur()),affConv(seance73.gettype(),seance73.getcours(),seance73.getsalle(), seance73.getprofesseur()),affConv(seance74.gettype(),seance74.getcours(),seance74.getsalle(), seance74.getprofesseur()),affConv(seance75.gettype(),seance75.getcours(),seance75.getsalle(), seance75.getprofesseur())},
+        };

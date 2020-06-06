@@ -1,0 +1,308 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Charles;
+
+/**
+ *
+ * @author gento
+ */
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class message_erreur_logi extends JFrame {
+
+
+  public message_erreur_logi(){
+    this.setTitle("Planning_ECE");
+    this.setSize(1800, 960);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.setLocationRelativeTo(null);
+    Color macouleur= new Color(0,150,150);
+
+    JPanel content = new JPanel();
+    content.setPreferredSize(new Dimension(1800,960 ));
+    content.setBackground(macouleur);
+    /**
+    ImageIcon icone = new ImageIcon("ECE_logo.jpg");
+    Image logo= icone.getImage();
+    ImageIcon icone2=new ImageIcon(logo);
+    JLabel image = new JLabel(icone2);
+    **/
+    
+    Font police = new Font("Courier", Font.BOLD, 30);
+    JLabel L1=new JLabel("                                                                              Erreur : E-mail et ou mot de passe incorrecte(s)                                                                                  ");
+
+    JPanel b1 = new JPanel();
+    b1.setLayout(new BoxLayout(b1, BoxLayout.LINE_AXIS));
+    b1.setBackground(macouleur);
+    L1.setFont(police);  
+    L1.setForeground(Color.red);     
+    L1.setHorizontalAlignment(JLabel.CENTER);
+    b1.add(L1);
+    
+    ImageIcon icone = new ImageIcon("Croix_rouge.png");
+    Image logo= icone.getImage();
+    ImageIcon icone2=new ImageIcon(logo);
+    JLabel croix=new JLabel(icone2);
+    
+    JLabel L9= new JLabel("                                                                                                                                                                                                                                                                                                    ");
+    JLabel L10= new JLabel("                                                                                                                                                                                                                                                                                                    ");
+    
+    JPanel b2 = new JPanel();
+    b2.setLayout(new BoxLayout(b2, BoxLayout.LINE_AXIS));
+    b2.setBackground(macouleur);
+    
+    b2.add(L9);
+    b2.add(croix);
+    b2.add(L10);
+    
+    JPanel b5 = new JPanel();
+    b5.setLayout(new BoxLayout(b5, BoxLayout.LINE_AXIS));
+    b5.setBackground(macouleur);
+    JLabel L7= new JLabel("                                                                                                                                                                                                                                                                                                     ");
+
+    JLabel L8= new JLabel("                                                                                                                                                                                                                                                                                                           ");
+    JButton erreur=new JButton("Recommencer");
+    
+    erreur.addActionListener(new ActionListener(){
+    public void actionPerformed(ActionEvent click) {
+        System.out.println("Vous avez cliquez sur le bouton loupe");
+            
+        }        
+    });
+    
+    b5.add(L7);
+    b5.add(erreur);
+    b5.add(L8);
+    
+    JPanel blanc1 = new JPanel();
+    blanc1.setBackground(macouleur);
+    blanc1.add(new JLabel("  "));
+    JPanel blanc2 = new JPanel();
+    blanc2.setBackground(macouleur);
+    blanc2.add(new JLabel("  "));
+    JPanel blanc3 = new JPanel();
+    blanc3.setBackground(macouleur);
+    blanc3.add(new JLabel("  "));
+    JPanel blanc4 = new JPanel();
+    blanc4.setBackground(macouleur);
+    blanc4.add(new JLabel("  "));
+    JPanel blanc5 = new JPanel();
+    blanc5.setBackground(macouleur);
+    blanc5.add(new JLabel("  "));
+    JPanel blanc6 = new JPanel();
+    blanc6.setBackground(macouleur);
+    blanc6.add(new JLabel("  "));   
+    JPanel blanc7 = new JPanel();
+    blanc7.setBackground(macouleur);
+    blanc7.add(new JLabel("  "));
+    JPanel blanc8 = new JPanel();
+    blanc8.setBackground(macouleur);
+    blanc8.add(new JLabel("  "));
+    JPanel blanc9 = new JPanel();
+    blanc9.setBackground(macouleur);
+    blanc9.add(new JLabel("  "));
+    JPanel blanc10 = new JPanel();
+    blanc10.setBackground(macouleur);
+    blanc10.add(new JLabel("  "));
+    JPanel blanc11 = new JPanel();
+    blanc11.setBackground(macouleur);
+    blanc11.add(new JLabel("  "));
+    JPanel blanc12 = new JPanel();
+    blanc12.setBackground(macouleur);
+    blanc12.add(new JLabel("  "));
+    JPanel blanc13 = new JPanel();
+    blanc13.setBackground(macouleur);
+    blanc13.add(new JLabel("  "));
+    JPanel blanc14 = new JPanel();
+    blanc14.setBackground(macouleur);
+    blanc14.add(new JLabel("  "));
+    JPanel blanc15 = new JPanel();
+    blanc15.setBackground(macouleur);
+    blanc15.add(new JLabel("  "));   
+    JPanel blanc16 = new JPanel();
+    blanc16.setBackground(macouleur);
+    blanc16.add(new JLabel("  "));
+    JPanel blanc17 = new JPanel();
+    blanc17.setBackground(macouleur);
+    blanc17.add(new JLabel("  "));
+    JPanel blanc18 = new JPanel();
+    blanc18.setBackground(macouleur);
+    blanc18.add(new JLabel("  "));      
+    JPanel blanc19 = new JPanel();
+    blanc19.setBackground(macouleur);
+    blanc19.add(new JLabel("  "));
+    JPanel blanc20 = new JPanel();
+    blanc20.setBackground(macouleur);
+    blanc20.add(new JLabel("  "));
+    JPanel blanc21 = new JPanel();
+    blanc21.setBackground(macouleur);
+    blanc21.add(new JLabel("  "));
+    JPanel blanc22 = new JPanel();
+    blanc22.setBackground(macouleur);
+    blanc22.add(new JLabel("  "));
+    JPanel blanc23 = new JPanel();
+    blanc23.setBackground(macouleur);
+    blanc23.add(new JLabel("  "));
+    JPanel blanc24 = new JPanel();
+    blanc24.setBackground(macouleur);
+    blanc24.add(new JLabel("  "));   
+    JPanel blanc25 = new JPanel();
+    blanc25.setBackground(macouleur);
+    blanc25.add(new JLabel("  "));
+    JPanel blanc26 = new JPanel();
+    blanc26.setBackground(macouleur);
+    blanc26.add(new JLabel("  "));
+    JPanel blanc27 = new JPanel();
+    blanc27.setBackground(macouleur);
+    blanc27.add(new JLabel("  "));
+    JPanel blanc28 = new JPanel();
+    blanc28.setBackground(macouleur);
+    blanc28.add(new JLabel("  "));
+    JPanel blanc29 = new JPanel();
+    blanc29.setBackground(macouleur);
+    blanc29.add(new JLabel("  "));
+    JPanel blanc30 = new JPanel();
+    blanc30.setBackground(macouleur);
+    blanc30.add(new JLabel("  "));
+    JPanel blanc31 = new JPanel();
+    blanc31.setBackground(macouleur);
+    blanc31.add(new JLabel("  "));
+    JPanel blanc32 = new JPanel();
+    blanc32.setBackground(macouleur);
+    blanc32.add(new JLabel("  "));
+    JPanel blanc33 = new JPanel();
+    blanc33.setBackground(macouleur);
+    blanc33.add(new JLabel("  "));   
+    JPanel blanc34 = new JPanel();
+    blanc34.setBackground(macouleur);
+    blanc34.add(new JLabel("  "));
+    JPanel blanc35 = new JPanel();
+    blanc35.setBackground(macouleur);
+    blanc35.add(new JLabel("  "));
+    JPanel blanc36 = new JPanel();
+    blanc36.setBackground(macouleur);
+    blanc36.add(new JLabel("  "));
+    JPanel blanc37 = new JPanel();
+    blanc37.setBackground(macouleur);
+    blanc37.add(new JLabel("  "));
+    JPanel blanc38 = new JPanel();
+    blanc38.setBackground(macouleur);
+    blanc38.add(new JLabel("  "));
+    JPanel blanc39 = new JPanel();
+    blanc39.setBackground(macouleur);
+    blanc39.add(new JLabel("  "));
+    JPanel blanc40 = new JPanel();
+    blanc40.setBackground(macouleur);
+    blanc40.add(new JLabel("  "));   
+    JPanel blanc41 = new JPanel();
+    blanc41.setBackground(macouleur);
+    blanc41.add(new JLabel("  "));
+    JPanel blanc42 = new JPanel();
+    blanc42.setBackground(macouleur);
+    blanc42.add(new JLabel("  "));
+    JPanel blanc43 = new JPanel();
+    blanc43.setBackground(macouleur);
+    blanc43.add(new JLabel("  "));
+    JPanel blanc44 = new JPanel();
+    blanc44.setBackground(macouleur);
+    blanc44.add(new JLabel("  "));
+    JPanel blanc45 = new JPanel();
+    blanc45.setBackground(macouleur);
+    blanc45.add(new JLabel("  "));
+    JPanel blanc46 = new JPanel();
+    blanc46.setBackground(macouleur);
+    blanc46.add(new JLabel("  "));
+    JPanel blanc47 = new JPanel();
+    blanc47.setBackground(macouleur);
+    blanc47.add(new JLabel("  "));   
+    JPanel blanc48 = new JPanel();
+    blanc48.setBackground(macouleur);
+    blanc48.add(new JLabel("  "));
+    JPanel blanc49 = new JPanel();
+    blanc49.setBackground(macouleur);
+    blanc49.add(new JLabel("  "));
+
+
+
+    
+    Box b6 = Box.createVerticalBox();
+    b6.setBackground(macouleur);
+    
+    b6.add(blanc1);
+    b6.add(blanc2);
+    b6.add(blanc4);
+    b6.add(blanc5);
+    b6.add(blanc6);
+    
+    b6.add(b2);
+    
+    b6.add(blanc7);
+    b6.add(blanc8);
+    
+    b6.add(b1);
+    
+    b6.add(blanc9);
+    b6.add(blanc10);
+    b6.add(blanc11);
+    b6.add(blanc12);
+    b6.add(blanc14);
+    b6.add(blanc15);
+
+    b6.add(blanc16);
+    b6.add(blanc17);
+    b6.add(blanc18);
+    
+    b6.add(b5);
+    
+    b6.add(blanc19);
+    b6.add(blanc20);
+    b6.add(blanc21);
+    b6.add(blanc22);
+    
+   
+    
+    b6.add(blanc23);
+    b6.add(blanc26);
+    b6.add(blanc27);
+    
+    
+    b6.add(blanc28);
+    b6.add(blanc29);
+    b6.add(blanc30);
+    b6.add(blanc31);
+    b6.add(blanc32);
+    b6.add(blanc37);
+    b6.add(blanc38);
+    b6.add(blanc39);
+    b6.add(blanc40);
+
+    this.setContentPane(b6);
+    //this.setContentPane(content);
+    this.setVisible(true);		
+  }
+  
+   public static void main(String[] args){
+      message_erreur_logi log_in = new message_erreur_logi();
+
+  }
+}

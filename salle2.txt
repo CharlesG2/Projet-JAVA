@@ -1,0 +1,311 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Charles;
+
+/**
+ *
+ * @author gento
+ */
+
+
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+/**
+ *
+ * @author gento
+ */
+public class Planning_salle extends JFrame implements ActionListener{
+    
+    Font police = new Font("Courier", Font.BOLD, 20);
+    private JTable tableau;
+    private char date;
+    private int i;
+    private JMenuBar menu = new JMenuBar();
+    
+    private JMenu m1 = new JMenu("Cours");
+    
+    private JMenu m1_2 = new JMenu("Emploi du temps");
+    private JRadioButtonMenuItem radio1 = new JRadioButtonMenuItem("Semaine");
+    private JRadioButtonMenuItem radio2 = new JRadioButtonMenuItem("Jour");
+    private JMenu m2 = new JMenu("Etudiant");
+    private JMenuItem i3 = new JMenuItem("Groupe");
+    private JMenuItem i4 = new JMenuItem("Liste des intervenant");
+    
+    private JMenu m3 = new JMenu("Promotions");
+    private JMenuItem i5 = new JMenuItem("Intervenants");
+
+    private JMenu m4 = new JMenu("Salles");
+    private JMenuItem i6 = new JMenuItem("Emploi du Temps des salles");
+    //private JMenuItem i7 = new JMenuItem("Salle libre");
+
+    private JLabel label=new JLabel();
+    private JButton bouton=new JButton("    GO GO    ");
+    private int num1=0;
+    private int num2=0;
+
+    
+    public Planning_salle(){
+        
+        this.setTitle("Planning_ECE_Etudiant");
+        this.setSize(1800, 960);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        Color macouleur= new Color(0,150,150);
+        JPanel content = new JPanel();
+        content.setPreferredSize(new Dimension(1800,960 ));
+        content.setBackground(macouleur);
+        
+        
+        i3.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        i4.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        i5.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        i6.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        radio1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        radio2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent click) {
+            
+            }        
+        });
+        
+        JPanel b1 = new JPanel();
+        
+        JLabel sem1=new JLabel("       SEMAINE n° :  ");
+        sem1.setFont(police);  
+        sem1.setForeground(Color.white);
+        
+        JLabel l1=new JLabel("                                                                                                                                                 ");
+        l1.setFont(police);  
+        l1.setForeground(Color.white);
+        
+
+        JTextField t1=new JTextField("n°semaine",2);
+        JTextField t2=new JTextField("n°salle",2);
+        
+        JLabel salle=new JLabel("     SALLE n° : ");
+        salle.setFont(police);  
+        salle.setForeground(Color.white); 
+        
+
+        JLabel vide=new JLabel("           ");
+        
+        
+        b1.setLayout(new BoxLayout(b1, BoxLayout.LINE_AXIS));
+        b1.setBackground(macouleur);
+        
+        bouton.addActionListener(this);
+        
+        b1.add(sem1);
+        b1.add(t1);
+        b1.add(salle);
+        b1.add(t2);
+        b1.add(vide);
+        b1.add(bouton);
+        b1.add(l1);
+       
+        Object[][] matieres = {   
+          {"8h30/10h00", "Thermodynamique","POO JAVA","","LV2","Probabilités & Statistques","" },
+          {"10h15/11h45", "Thermodynamique","POO JAVA","Web dynamique","Thermodynamique","Probabilités & Statistiques","" },
+          {"12h00/13h30", "","English","Web dynamique","","","" },
+          {"13h45/15h15", "Traitement du signal","","","","Web dynamique","" },
+          {"15h30/17h00", "Traitement du signal","Probabilités & Statistiques","Robotique","","Web dynamique","" },
+          {"17h15/18h45", "","","Robotique","","","" },
+          {"19h00/20h30", "","","","","","" },
+        };
+        
+        String  title[] = {"HORRAIRE","LUNDI"+date, "MARDI"+date, "MECREDI"+date, "JEUDI"+date,"VENDREDI"+date,"SAMEDI"+date};
+        
+        
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(radio1);
+        bg.add(radio2);
+        radio1.setSelected(true);
+        
+        this.m1_2.add(radio1);
+        this.m1_2.add(radio2);
+        this.m1.add(this.m1_2);
+        
+        this.m2.add(i3);
+        this.m2.add(i4);
+        
+        this.m3.add(i5);
+        
+        this.m4.add(i6);
+        //this.m4.add(i7);
+        
+        this.menu.add(m1);
+        this.menu.add(m2);
+        this.menu.add(m3);
+        this.menu.add(m4);
+        this.setJMenuBar(menu);
+        
+        JPanel blanc1 = new JPanel();
+        blanc1.setBackground(macouleur);
+        blanc1.add(new JLabel("  "));
+        JPanel blanc2 = new JPanel();
+        blanc2.setBackground(macouleur);
+        blanc2.add(new JLabel("  "));
+        JPanel blanc3 = new JPanel();
+        blanc3.setBackground(macouleur);
+        blanc3.add(new JLabel("  "));
+        JPanel blanc4 = new JPanel();
+        blanc4.setBackground(macouleur);
+        blanc4.add(new JLabel("  "));
+        JPanel blanc5 = new JPanel();
+        blanc5.setBackground(macouleur);
+        blanc5.add(new JLabel("  "));
+        JPanel blanc6 = new JPanel();
+        blanc6.setBackground(macouleur);
+        blanc6.add(new JLabel("  "));
+        JPanel blanc7 = new JPanel();
+        blanc7.setBackground(macouleur);
+        blanc7.add(new JLabel("  "));
+        JPanel blanc8 = new JPanel();
+        blanc8.setBackground(macouleur);
+        blanc8.add(new JLabel("  "));
+        JPanel blanc9 = new JPanel();
+        blanc9.setBackground(macouleur);
+        blanc9.add(new JLabel("  "));
+        JPanel blanc10 = new JPanel();
+        blanc10.setBackground(macouleur);
+        JPanel blanc11 = new JPanel();
+        blanc11.setBackground(macouleur);
+        blanc11.add(new JLabel("  "));
+        JPanel blanc12 = new JPanel();
+        blanc12.setBackground(macouleur);
+        blanc12.add(new JLabel("  "));
+        JPanel blanc13 = new JPanel();
+        blanc13.setBackground(macouleur);
+        blanc13.add(new JLabel("  "));
+        JPanel blanc14 = new JPanel();
+        blanc14.setBackground(macouleur);
+        blanc14.add(new JLabel("  "));
+        JPanel blanc15 = new JPanel();
+        blanc15.setBackground(macouleur);
+        blanc15.add(new JLabel("  "));   
+        JPanel blanc16 = new JPanel();
+        blanc16.setBackground(macouleur);
+        blanc16.add(new JLabel("  "));
+        JPanel blanc17 = new JPanel();
+        blanc17.setBackground(macouleur);
+        blanc17.add(new JLabel("  "));
+        JPanel blanc18 = new JPanel();
+        blanc18.setBackground(macouleur);
+        blanc18.add(new JLabel("  "));      
+        JPanel blanc19 = new JPanel();
+        blanc19.setBackground(macouleur);
+        blanc19.add(new JLabel("  "));
+        JPanel blanc20 = new JPanel();
+        blanc20.setBackground(macouleur);
+        blanc20.add(new JLabel("  "));
+        
+        Box b6 = Box.createVerticalBox();
+        b6.setBackground(macouleur);
+        
+        b6.add(blanc1);
+        b6.add(blanc2);
+        b6.add(blanc3);
+        b6.add(blanc4);
+        b6.add(blanc5);
+        b6.add(blanc6);
+
+        b6.add(b1); 
+        b6.add(blanc7);
+        
+        tableau = new JTable(matieres, title);
+        tableau.setRowHeight(70);
+        //tableau.setSelectionBackground(macouleur);
+        tableau.setRowMargin(20);
+        b6.add(new JScrollPane(tableau), BorderLayout.CENTER);
+        
+        b6.add(blanc11);
+        b6.add(blanc12);
+        b6.add(blanc13);
+        b6.add(blanc14);
+        b6.add(blanc15);
+        b6.add(blanc16);
+        b6.add(blanc17);
+        b6.add(blanc18);
+        b6.add(blanc19);
+        b6.add(blanc20);
+        
+        this.setContentPane(b6);
+        this.setVisible(true);       
+    }
+    class ItemState1 implements ItemListener{
+        public void itemStateChanged(ItemEvent e) {
+            
+            System.out.println("Semaine " + e.getItem());
+            num1= (Integer) e.getItem();
+        }               
+    }
+    class ItemState2 implements ItemListener{
+        public void itemStateChanged(ItemEvent e) {
+
+            System.out.println("Salle " + e.getItem());
+            num2= (Integer) e.getItem();
+        }               
+    }
+    
+    public void actionPerformed(ActionEvent click) {
+        if(click.getSource() == bouton){
+            System.out.println("n°semaine et salle  "+num1+"    "+num2);
+            
+            
+        }
+    }
+    
+    public static void main(String[] args){
+        Planning_salle salle = new Planning_salle();
+    }
+
+}

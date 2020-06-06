@@ -1,0 +1,239 @@
+package Charles;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+/**
+ *
+ * @author gento
+ */
+public class Promo_prof_1 extends JFrame{
+    
+    Font police = new Font("Courier", Font.BOLD, 20);
+    private JTable tableau;
+    private char date;
+    private int i;
+    private JMenuBar menu = new JMenuBar();
+    
+    private JMenu m1 = new JMenu("Cours");
+    
+    private JMenu m1_2 = new JMenu("Emploi du temps");
+    private JRadioButtonMenuItem radio1 = new JRadioButtonMenuItem("Semaine");
+    private JRadioButtonMenuItem radio2 = new JRadioButtonMenuItem("Jour");
+    private JMenu m2 = new JMenu("Etudiant");
+    private JMenuItem i3 = new JMenuItem("Groupe");
+    private JMenuItem i4 = new JMenuItem("Liste des intervenant");
+    private JMenuItem i7 = new JMenuItem("Vos informations");
+    
+    private JMenu m3 = new JMenu("Promotions");
+    private JMenuItem i5 = new JMenuItem("Intervenants");
+
+    private JMenu m4 = new JMenu("Salles");
+    private JMenuItem i6 = new JMenuItem("Emploi du Temps des salles");
+    
+    public Promo_prof_1(){
+        
+        this.setTitle("Planning_ECE_Etudiant");
+        this.setSize(1800, 960);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        Color macouleur= new Color(0,150,150);
+        JPanel content = new JPanel();
+        content.setPreferredSize(new Dimension(1800,960 ));
+        content.setBackground(macouleur);
+        Font police = new Font("Courier", Font.BOLD, 20);
+
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(radio1);
+        bg.add(radio2);
+        radio1.setSelected(true);
+        this.m1_2.add(radio1);
+        this.m1_2.add(radio2);
+        this.m1.add(this.m1_2);
+        
+        this.m2.add(i3);
+        this.m2.add(i4);
+        this.m2.add(i7);
+        
+        this.m3.add(i5);
+        
+        this.m4.add(i6);
+        
+        this.menu.add(m1);
+        this.menu.add(m2);
+        this.menu.add(m3);
+        this.menu.add(m4);
+        this.setJMenuBar(menu);
+        JPanel b1 = new JPanel();
+        JLabel prof1=new JLabel("                                   Liste des intervenants :  ");
+        JLabel prof2=new JLabel("                                                                                                                                                                                                                                  ");
+        
+        b1.setLayout(new BoxLayout(b1, BoxLayout.LINE_AXIS));
+        b1.setBackground(macouleur);
+        prof1.setFont(police);  
+        prof1.setForeground(Color.white);
+        prof2.setFont(police);  
+        prof2.setForeground(Color.white);
+        
+        
+        b1.add(prof1);
+        b1.add(prof2);
+        
+        Object[][] contenttab = {   
+          
+          {"1", "",""},
+          {"2", "",""},
+          {"3", "",""},
+          {"4", "",""},
+          {"5", "",""},
+          {"6", "",""},
+          {"7", "",""},
+          {"8", "",""},
+          {"9", "",""},
+          {"10", "",""},
+          {"11", "",""},
+          {"12", "",""},
+          {"13", "",""},
+          {"14", "",""},
+          {"15", "",""},
+          {"16", "",""},
+          {"17", "",""},
+          {"18", "",""},
+          {"19", "",""},
+          {"20", "",""},
+          {"21", "",""},
+          {"22", "",""},
+          {"23", "",""},
+          {"24", "",""},
+          {"25", "",""},
+          
+        };
+        
+        String  title []= {"Nom","Prénom","E-Mail"};
+        
+        JPanel blanc1 = new JPanel();
+        blanc1.setBackground(macouleur);
+        blanc1.add(new JLabel("  "));
+        JPanel blanc2 = new JPanel();
+        blanc2.setBackground(macouleur);
+        blanc2.add(new JLabel("  "));
+        JPanel blanc3 = new JPanel();
+        blanc3.setBackground(macouleur);
+        blanc3.add(new JLabel("  "));
+        JPanel blanc4 = new JPanel();
+        blanc4.setBackground(macouleur);
+        blanc4.add(new JLabel("  "));
+        JPanel blanc5 = new JPanel();
+        blanc5.setBackground(macouleur);
+        blanc5.add(new JLabel("  "));
+        JPanel blanc6 = new JPanel();
+        blanc6.setBackground(macouleur);
+        blanc6.add(new JLabel("  "));
+        JPanel blanc7 = new JPanel();
+        blanc7.setBackground(macouleur);
+        blanc7.add(new JLabel("  "));
+        JPanel blanc8 = new JPanel();
+        blanc8.setBackground(macouleur);
+        blanc8.add(new JLabel("  "));
+        JPanel blanc9 = new JPanel();
+        blanc9.setBackground(macouleur);
+        blanc9.add(new JLabel("  "));
+        JPanel blanc10 = new JPanel();
+        blanc10.setBackground(macouleur);
+        JPanel blanc11 = new JPanel();
+        blanc11.setBackground(macouleur);
+        blanc11.add(new JLabel("  "));
+        JPanel blanc12 = new JPanel();
+        blanc12.setBackground(macouleur);
+        blanc12.add(new JLabel("  "));
+        JPanel blanc13 = new JPanel();
+        blanc13.setBackground(macouleur);
+        blanc13.add(new JLabel("  "));
+        JPanel blanc14 = new JPanel();
+        blanc14.setBackground(macouleur);
+        blanc14.add(new JLabel("  "));
+        JPanel blanc15 = new JPanel();
+        blanc15.setBackground(macouleur);
+        blanc15.add(new JLabel("  "));   
+        JPanel blanc16 = new JPanel();
+        blanc16.setBackground(macouleur);
+        blanc16.add(new JLabel("  "));
+        JPanel blanc17 = new JPanel();
+        blanc17.setBackground(macouleur);
+        blanc17.add(new JLabel("  "));
+        JPanel blanc18 = new JPanel();
+        blanc18.setBackground(macouleur);
+        blanc18.add(new JLabel("  "));      
+        JPanel blanc19 = new JPanel();
+        blanc19.setBackground(macouleur);
+        blanc19.add(new JLabel("  "));
+        JPanel blanc20 = new JPanel();
+        blanc20.setBackground(macouleur);
+        blanc20.add(new JLabel("  "));
+        
+        Box b6 = Box.createVerticalBox();
+        b6.setBackground(macouleur);
+        
+        b6.add(blanc1);
+        b6.add(blanc2);
+        b6.add(blanc3);
+        b6.add(blanc4);
+        
+        b6.add(b1);
+            
+        b6.add(blanc5);
+        tableau = new JTable(contenttab, title);
+        tableau.setRowHeight(70);
+        tableau.setSelectionBackground(macouleur);
+        tableau.setRowMargin(20);
+        b6.add(new JScrollPane(tableau), BorderLayout.CENTER);
+        
+        
+        b6.add(blanc6);
+        b6.add(blanc7);
+        b6.add(blanc11);
+        b6.add(blanc12);
+        b6.add(blanc13);
+        b6.add(blanc14);
+        b6.add(blanc15);
+        b6.add(blanc16);
+        b6.add(blanc17);
+        b6.add(blanc18);
+        b6.add(blanc19);
+        b6.add(blanc20);
+        
+        this.setContentPane(b6);
+        this.setVisible(true);  
+        
+        
+    }
+ 
+    public static void main(String[] args){
+        Promo_prof_1 prof1 = new Promo_prof_1();
+    }
+}
